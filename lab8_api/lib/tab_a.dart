@@ -80,7 +80,7 @@ class _TabAPageState extends State<TabAPage> {
         title: const Text('Ghibli Films'),  // Title on the top
         actions: [
           IconButton(onPressed: _onFetch, icon: const Icon(Icons.download)),  // Fetch button
-          IconButton(onPressed: _onClear, icon: const Icon(Icons.clear_all)), // Clear button
+          IconButton(onPressed: _onClear, icon: const Icon(Icons.clear)), // Clear button
         ],
       ),
       body: Padding(
@@ -147,7 +147,7 @@ class _TabAPageState extends State<TabAPage> {
 }
 
 
-/// State of the widget before searching for a film
+/// Helper state of the widget before searching for a film
 class _EmptyState extends StatelessWidget {
   final String message;
   const _EmptyState({required this.message});
@@ -158,8 +158,6 @@ class _EmptyState extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.info_outline, size: 40),
-          const SizedBox(height: 8),
           Text(message, textAlign: TextAlign.center),
         ],
       ),

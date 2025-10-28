@@ -12,7 +12,6 @@ class Lab8App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Lab 8',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
       home: const HomeTabs(),
       debugShowCheckedModeBanner: false,
     );
@@ -31,11 +30,7 @@ class _HomeTabsState extends State<HomeTabs> {
   @override
   Widget build(BuildContext context) {
     final pages = const [
-
       TabAPage(),
-      Center(child: Text('Tab B – placeholder')),
-
-      Center(child: Text('Tab A – placeholder')),
       BreweryTab() 
     ];
 
@@ -45,7 +40,7 @@ class _HomeTabsState extends State<HomeTabs> {
         selectedIndex: _index,
         destinations: const [
           NavigationDestination(icon: Icon(Icons.movie), label: 'Studio Ghibli'),
-          NavigationDestination(icon: Icon(Icons.tab_outlined), label: 'Tab B'),
+          NavigationDestination(icon: Icon(Icons.sports_bar), label: 'Brewery Finder'),
         ],
         onDestinationSelected: (i) => setState(() => _index = i),
       ),
