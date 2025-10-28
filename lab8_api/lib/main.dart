@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'tab_a.dart';
+import 'package:lab8_api/brewery.dart';
+
 
 void main() => runApp(const Lab8App());
 
@@ -8,8 +11,7 @@ class Lab8App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lab 8 – Skeleton',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
+      title: 'Lab 8',
       home: const HomeTabs(),
       debugShowCheckedModeBanner: false,
     );
@@ -27,20 +29,18 @@ class _HomeTabsState extends State<HomeTabs> {
 
   @override
   Widget build(BuildContext context) {
-    final titles = ['Tab A', 'Tab B'];
     final pages = const [
-      Center(child: Text('Tab A – placeholder')),
-      Center(child: Text('Tab B – placeholder')),
+      TabAPage(),
+      BreweryTab() 
     ];
 
     return Scaffold(
-      appBar: AppBar(title: Text(titles[_index])),
       body: IndexedStack(index: _index, children: pages),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.tab), label: 'Tab A'),
-          NavigationDestination(icon: Icon(Icons.tab_outlined), label: 'Tab B'),
+          NavigationDestination(icon: Icon(Icons.movie), label: 'Studio Ghibli'),
+          NavigationDestination(icon: Icon(Icons.sports_bar), label: 'Brewery Finder'),
         ],
         onDestinationSelected: (i) => setState(() => _index = i),
       ),
