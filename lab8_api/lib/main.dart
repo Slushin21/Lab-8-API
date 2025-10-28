@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'tab_a.dart';
+import 'package:lab8_api/brewery.dart';
 
 
 void main() => runApp(const Lab8App());
@@ -30,8 +31,12 @@ class _HomeTabsState extends State<HomeTabs> {
   @override
   Widget build(BuildContext context) {
     final pages = const [
+
       TabAPage(),
       Center(child: Text('Tab B – placeholder')),
+
+      Center(child: Text('Tab A – placeholder')),
+      BreweryTab() 
     ];
 
     return Scaffold(
