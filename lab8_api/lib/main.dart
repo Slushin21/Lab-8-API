@@ -10,7 +10,7 @@ class Lab8App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lab 8 – Skeleton',
+      title: 'Lab 8',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
       home: const HomeTabs(),
       debugShowCheckedModeBanner: false,
