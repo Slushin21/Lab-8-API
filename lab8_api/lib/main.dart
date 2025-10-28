@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab8_api/brewery.dart';
 
 void main() => runApp(const Lab8App());
 
@@ -30,7 +31,7 @@ class _HomeTabsState extends State<HomeTabs> {
     final titles = ['Tab A', 'Tab B'];
     final pages = const [
       Center(child: Text('Tab A – placeholder')),
-      Center(child: Text('Tab B – placeholder')),
+      BreweryTab()
     ];
 
     return Scaffold(
